@@ -6,7 +6,7 @@ require_once(dirname(__FILE__) . '/engine/Updater.php');
 
 // ----- You can edit these settings: -----
 
-date_default_timezone_set('America/New_York'); // Sometimes I hate PHP. This is one of those times.
+date_default_timezone_set('Asia/Jakarta'); // Sometimes I hate PHP. This is one of those times.
 
 // Paths
 Updater::$source_path   = '/home/blog/Dropbox/Blog';
@@ -16,7 +16,7 @@ Updater::$cache_path    = '/home/blog/secondcrack/cache';
 Updater::$post_extension = '.md';
 
 // Blog metadata
-Post::$blog_title = 'My Blog';
+Post::$blog_title = 'Secondcrack Blog';
 Post::$blog_url   = 'http://www.mydomain.com/';
 Post::$blog_description = 'I\'m a blogger.';
 
