@@ -15,7 +15,7 @@ Next switch to your new 'blog' user account with the command `su blog`.
 
  Paste the following command and press enter to make the magic happen. You'll be prompted for your password.
 
-    cd ~ && wget https://raw.github.com/nickwynja/deploysecondcrack/master/deploysecondcrack.sh; . ~/deploysecondcrack.sh
+    cd ~ && wget https://raw.github.com/muslax/deploysecondcrack/master/deploysecondcrack.sh; . ~/deploysecondcrack.sh
     
 This script will install `httpd`, `php`, `git`, `inotify-tools` and update/install other dependancies. It'll take about 5 minutes to run. Dropbox, the Dropbox CLI, a Dropbox `/etc/init.d/` service, Second Crack be deployed.
 
@@ -27,7 +27,11 @@ Optional: If you want some basic styling out of the box, you'll have to include 
     
 We use a hardcoded URL here rather than a relative path so that our stylesheet can be found when you preview posts locally out of the `_previews` folder. 
 
-### 3. Initiate Dropbox
+### 3. Edit dropboxd
+
+Open `~/.dropbox-dist/dropboxd` and insert a new line after first line that read `#!/bin/sh` and enter: `export LANGUAGE=en`.
+
+### 4. Initiate Dropbox
 
 
 Dropbox mostly installed but you need to initiate it and link the server to your account. Enter this command:
