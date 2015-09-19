@@ -86,6 +86,7 @@ clear;
 
 # Configure Second Crack
 
+# - Assuming we start with new installation, hence no Blog folder
 sudo mkdir -p ~/Dropbox/Blog/templates/;
 sudo cp ~/secondcrack/example-templates/main.php ~/Dropbox/Blog/templates/main.php;
 sudo cp ~/secondcrack/example-templates/rss.php ~/Dropbox/Blog/templates/rss.php;
@@ -93,6 +94,9 @@ sudo mkdir -p ~/Dropbox/Blog/assets/css/;
 sudo cp ~/deploysecondcrack/config-files/main.css ~/Dropbox/Blog/assets/css/main.css;
 sudo mkdir -p ~/secondcrack/www/;
 sudo ln -s ~/Dropbox/Blog/assets ~/secondcrack/www/assets;
+sudo mkdir -p ~/Dropbox/Blog/drafts/_previews/;
+sudo mkdir -p ~/Dropbox/Blog/drafts/_publish-now/;
+sudo mkdir -p ~/Dropbox/Blog/posts/;
 sudo chmod -R o+x  ~/Dropbox;
 sudo chown -R blog:blog ~/secondcrack/;
 sudo chown -R blog:blog ~/Dropbox/;
@@ -105,7 +109,9 @@ echo "1. Make sure Apache DocumentRoot is properly set to /home/blog/secondcrack
 echo "2. Edit /etc/php.ini to enable short_open_tags";
 echo "3. Edit ~/.dropbox-dist/dropboxd; add \"export LANGUAGE=en\" (whithout quote) after first line.";
 echo "4. If directory assets isn't accessible, try \"sudo chmod -R o+x  ~/Dropbox;\"";
-echo "5. Restart httpd";
+echo "5. If yo had such a message: `Can't sync "\"my-new-post.md\" (permission denied)`...";
+echo "   try: `sudo chown -R blog:blog \~\/Dropbox\/Blog\/drafts\/`";
+echo "6. Restart httpd";
 
 # Manual
 # 1. Make sure Apache DocumentRoot is properly set to /home/blog/secondcrack/www
