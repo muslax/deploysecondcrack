@@ -1,3 +1,5 @@
+### This is for CentOS 7
+
 **Note:** `deploysecondcrack` is tightly configured for CentOS 6.0. This is intended for easy deployment by users not familiar with environment configuration and system administration. This isn't guaranteed to work at all but is most likely to work with  CentOS 6.0 Rackspace instances. 
 
 **If you're new to this:** Read my post at [nickwynja.com/deploysecondcrack](http://nickwynja.com/deploysecondcrack) that goes into more detail about how you can get Second Crack up and running.
